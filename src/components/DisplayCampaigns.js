@@ -36,7 +36,6 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
               ></FundCard>
             ))
           : ""}
-        Hereeeee
       </div>
     </div>
   );
