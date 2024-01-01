@@ -43,6 +43,7 @@ const Sidebar = () => {
             <Icon
               key={link.name}
               {...link}
+              imgUrl={link.imgUrl}
               isActive={isActive}
               handleClick={() => {
                 if (!link.disabled) {

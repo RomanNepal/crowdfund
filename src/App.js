@@ -13,14 +13,14 @@ const App = () => {
       <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />} index></Route> 
           <Route path="/create-campaign" element={<CreateCampaign />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route
             path="/campaign-details/:id"
             element={<CampaignDetails />}
           ></Route>
-        </Routes> 
+        </Routes>
       </div>
     </div>
   );
