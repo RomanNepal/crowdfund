@@ -21,7 +21,7 @@ const Navbar = () => {
         } ${styles}`}
       >
         {isActive === name ? (
-          <img src={imgUrl} className="w-1/2 h-1/2" />
+          <img src={imgUrl} alt={'logo'} className="w-1/2 h-1/2" />
         ) : (
           <img
             src={imgUrl}
