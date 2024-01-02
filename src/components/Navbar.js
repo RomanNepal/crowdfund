@@ -3,7 +3,7 @@ import { CustomButton } from "./";
 import { logo, menu, search, thirdweb } from "../assets";
 import { Link, useNavigate } from "react-router-dom";
 import { navlinks } from "../constants.js";
-import { useStateContext } from "../context/index.jsx";
+import { useStateContext } from "../context";
 const Navbar = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState("dashboard");
@@ -21,7 +21,7 @@ const Navbar = () => {
         } ${styles}`}
       >
         {isActive === name ? (
-          <img src={imgUrl} alt={'logo'} className="w-1/2 h-1/2" />
+          <img src={imgUrl} alt={"logo"} className="w-1/2 h-1/2" />
         ) : (
           <img
             src={imgUrl}

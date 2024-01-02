@@ -34,19 +34,18 @@ const CampaignDetails = () => {
   }, [contract, address]);
 
   return (
-    <>
-      {isLoading && <Loader />}
+    <div>
+      {isLoading && "Loading..."}
       <div className="w-full flex md:flex-row flex-col mt-10 gap-[30px]">
-        <div className="flex-1 flex-col">
+        <div className="flex-1 flex-col rounded-lg">
           <img
             src={state.image}
             alt="campaign"
-            className="w-full h-[410px] object-cover rounded-xl"
+            className="w-full h-[410px] object-cover rounded-xl z-10"
           />
-
           <div className="relative w-full h-[5px] bg-[#3a3a43] mt-2">
             <div
-              className="absolute h-full bg-[#4ACD8D]"
+              className="absolute h-full bg-[#4acd8d]"
               style={{
                 width: `${calculateBarPercentage(
                   state.target,
@@ -69,7 +68,7 @@ const CampaignDetails = () => {
       <div className="mt-[60px] flex lg:flex-row flex-col gap-5">
         <div className="flex-[2] flex flex-col gap-[40px]">
           <div>
-            <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
+            <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase mt-[20px]">
               Creator
             </h4>
             <div className="mt-[20px] flex flex-row items-center flex-wrap gap-[14px]">
@@ -92,7 +91,7 @@ const CampaignDetails = () => {
           </div>
           {/* // */}
           <div>
-            <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
+            <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase mt-[20px]">
               Story
             </h4>
             <div className="mt-[20px]">
@@ -164,7 +163,7 @@ const CampaignDetails = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
